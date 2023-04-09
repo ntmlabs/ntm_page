@@ -2,15 +2,11 @@ import Header from "./Header"
 import Footer from "./Footer"
 import GradientBackground from "./GradientBackground"
 
-export default function Layout({children}) {
+export default function Layout({ children }) {
     let links = [
         {
-            label: 'Projects',
-            route: '/projects',
-        },
-        {
             label: "About",
-            route: "/contactus"
+            route: "/contact"
         },
         {
             label: "Create",
@@ -19,10 +15,10 @@ export default function Layout({children}) {
         }
     ]
     return (
-        <div className="font-custom grid grid-rows-3">
+        <div className="font-custom">
             <GradientBackground />
             <Header links={links} title={"NTM"} tagline={"labs"}></Header>
-            <main>
+            <main className="p-4">
                 {children}
             </main>
             <Footer></Footer>
